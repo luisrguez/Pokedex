@@ -2,11 +2,22 @@ console.log("Hello Danna");
 
 const fetchPokemon = () =>{
     const pokeName = document.getElementById("pokeName");
-    let pokeInput = pokeName.value;
+    //Control de minusculas
+    let pokeInput = pokeName.value.toLowerCase();
+    
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeInput}`;
     fetch(url).then((res) => {
         //console.log(res);
-        return res.json();
+        //Validando nuestro programa por si existe un error el programa no truene
+
+        if(res.status != "200"){
+            console.log(res);
+            pokeImage("./img/PK2.png");
+        }
+
+        else{
+            return res.json();
+        }
     }).then((data) => {
         console.log(data);
         let pokeImg = data.sprites.front_default;
