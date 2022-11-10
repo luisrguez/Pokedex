@@ -12,4 +12,18 @@ const fetchPokemon = () =>{
     })
 }
 
-fetchPokemon();
+//fetchPokemon();
+
+const pokeImage = (url) => {
+    const pokeImg = document.getElementById("pokeImg");
+    pokeImg.src = url;
+}
+
+pokeImage("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/132.png")
+
+const imprimirPoke = () => {
+    const pokeName = document.getElementById("pokeName");
+    let pokeInput = pokeName.value;
+    console.log("Hola " + pokeInput);
+    //console.log("Hola Danna");
+}

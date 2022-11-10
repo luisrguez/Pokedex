@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./pokedex.js"></script>
     <title>Pokédex</title>
 </head>
 <body>
     <h1>Who's that pokémon?</h1>
-    <img src="./img/PK1.png" alt="Pokebola" width="200px">
+    <img src="./img/PK1.png" alt="Pokebola" id="pokeImg" width="200px">
     <br><br>
     <input type="text" placeholder="Search" id="pokeName" name="pokeName">
     <br>
-    <button>Change Pokémon</button>
+    <button onclick="imprimirPoke()">Change Pokémon</button>
 </body>
+<footer>
+    <script src="./pokedex.js"></script>
+</footer>
 </html>
